@@ -14,3 +14,4 @@ RUN set -ex \
     && docker-php-ext-install -j$(getconf _NPROCESSORS_ONLN) mysqli \
     && curl -L https://github.com/jwilder/dockerize/releases/download/v0.4.0/dockerize-alpine-linux-amd64-v0.4.0.tar.gz | tar -zxf - -C /usr/bin \
     && chown root:root /usr/bin/dockerize
+    && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
